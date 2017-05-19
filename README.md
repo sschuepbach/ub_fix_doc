@@ -21,7 +21,7 @@ Die Fix-Routine funktioniert auch mit mehreren Unterfeldern $e/$j pro Sucheinsti
 Achtung! Gibt es für dieselbe ausgeschriebene Form mehrere gültige Codes (z.B. Beziehungskennzeichnung "Kameramann" -> "cng"/"vdg"), so setzt die Routine immer nur den ersten Code. 
 
 ## Technische Implementation
-Die Fix-Routine muss in dsv01/dsv05/tab in [http://aleph.unibas.ch/dirlist/u/dsv51/tab/tab_fix tab_fix] eingetragen werden: 
+Die Fix-Routine muss in dsv01/dsv05/tab in [http://aleph.unibas.ch/dirlist/u/dsv51/tab/tab_fix] eingetragen werden: 
 
  INS   fix_doc_rdasave.pl
 
