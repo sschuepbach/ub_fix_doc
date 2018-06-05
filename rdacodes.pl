@@ -760,3 +760,19 @@ our %relator = (
 "éditeur" => "pbl",
 "éditeur intellectuel" => "edt",
 );
+
+our %code655 = (
+"Ausstellung" => "Ausstellungskatalog",
+"Kongress" => "Konferenzschrift",
+"Wörterbuch <mehrsprachig>" => "Mehrsprachiges Wörterbuch",
+"Belletristische Darstellung" => "Fiktionale Darstellung",
+"Programm" => "Sofware",
+"Lernprogramm" => "Lernsofware",
+"Schriftenreihe" => "Monografische Reihe",
+"Amtsdrucksache" => "Amtliche Publikation",
+"Bibliographie" => "Bibliografie",
+"Biographie" => "Biografie",
+"Autobiographie" => "Autobiographie",
+"Graphik" => "Grafik",
+"Photographie" => "Fotografie"
+);
