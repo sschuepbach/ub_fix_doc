@@ -772,7 +772,7 @@ our %code655 = (
 "Amtsdrucksache" => "Amtliche Publikation",
 "Bibliographie" => "Bibliografie",
 "Biographie" => "Biografie",
-"Autobiographie" => "Autobiographie",
+"Autobiographie" => "Autobiografie",
 "Graphik" => "Grafik",
 "Photographie" => "Fotografie"
 );
