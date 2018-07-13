@@ -769,17 +769,17 @@ our %relator = (
 );
 
 our %code655 = (
-"Ausstellung" => "Ausstellungskatalog",
-"Kongress" => "Konferenzschrift",
-"Wörterbuch <mehrsprachig>" => "Mehrsprachiges Wörterbuch",
-"Belletristische Darstellung" => "Fiktionale Darstellung",
-"Programm" => "Sofware",
-"Lernprogramm" => "Lernsofware",
-"Schriftenreihe" => "Monografische Reihe",
 "Amtsdrucksache" => "Amtliche Publikation",
+"Ausstellung" => "Ausstellungskatalog",
+"Autobiographie" => "Autobiografie",
+"Belletristische Darstellung" => "Fiktionale Darstellung",
 "Bibliographie" => "Bibliografie",
 "Biographie" => "Biografie",
-"Autobiographie" => "Autobiografie",
 "Graphik" => "Grafik",
+"Kongress" => "Konferenzschrift",
+"Lernprogramm" => "Lernsofware",
+"Programm" => "Sofware",
 "Photographie" => "Fotografie"
+"Schriftenreihe" => "Monografische Reihe",
+"Wörterbuch <mehrsprachig>" => "Mehrsprachiges Wörterbuch",
 );
