@@ -25,7 +25,7 @@ Die Fix-Routine funktioniert auch mit mehreren Unterfeldern $e/$j pro Sucheinsti
 Achtung! Gibt es für dieselbe ausgeschriebene Form mehrere gültige Codes (z.B. Beziehungskennzeichnung "Kameramann" -> "cng"/"vdg"), so setzt die Routine immer nur den ersten Code. 
 
 ### Technische Implementation
-Die Fix-Routine muss in dsv01/dsv05/tab in [http://aleph.unibas.ch/dirlist/u/dsv51/tab/tab_fix] eingetragen werden: 
+Die Fix-Routine muss in [http://aleph.unibas.ch/dirlist/u/dsv01/tab/tab_fix] bzw. [http://aleph.unibas.ch/dirlist/u/dsv05/tab/tab_fix] eingetragen werden: 
 
  INS   fix_doc_rdasave.pl
 
@@ -42,7 +42,7 @@ Beim Importieren von Fremddaten stehen oft englischsprachige Begriffe in den 336
 
 ### Technische Implementation
 
-Die Fix-Routine muss in dsv01/tab in [http://aleph.unibas.ch/dirlist/u/dsv51/tab/tab_fix] eingetragen werden:
+Die Fix-Routine muss in [http://aleph.unibas.ch/dirlist/u/dsv01/tab/tab_fix] eingetragen werden:
 
 * KOPIE fix_doc_rdaimport.pl
 * KOPOS fix_doc_rdaimport.pl
@@ -91,7 +91,7 @@ Die Routine wird aktiv, wenn ein Feld 655 mit Indikator 2=7 und mindestens ein U
 
 ### Technische Implementation
 
-Die Fix-Routine muss in dsv01/tab in [http://aleph.unibas.ch/dirlist/u/dsv51/tab/tab_fix] eingetragen werden:
+Die Fix-Routine muss in [http://aleph.unibas.ch/dirlist/u/dsv01/tab/tab_fix] eingetragen werden:
 
 * DSV01: INS   fix_doc_655.pl
 
