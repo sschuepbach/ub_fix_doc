@@ -2,7 +2,7 @@
 
 Dieses Repository enthält verschiedene Fix-Routinen, die im IDS Basel Bern (DSV01) und HAN (DSV05) zum Einsatz kommen.
 
-## ub_fix_doc_rdasave
+## ub_fix_doc_rdasave.pl
 
 ### Anwendungszweck
 
@@ -34,7 +34,7 @@ Zusätzlich müssen auf dem Aleph Server folgende Perl-Skripte nach /exlibris/al
 * fix_doc_rdasave.pl (Fix-Routine)
 * rdacodes.pl (Konkordanz)
 
-## ub_fix_doc_rdaimport
+## ub_fix_doc_rdaimport.pl
 
 ### Anwendungszweck
 
@@ -53,12 +53,11 @@ Zusätzlich müssen auf dem Aleph Server folgendes Perl-Skript nach /exlibris/al
 * fix_doc_rdaimport.pl
 * rdacodes.pl (Konkordanz)
 
-## ub_fix_doc_2gnd
+## ub_fix_doc_2gnd.pl / ub_fix_doc_2gnd_han.pl
 
 ### Anwendungszweck
 
-Sacherschliessungsfelder in DSV01 und DSV05, die mit der GND verknüpft sind, müssen zwingend ein Unterfeld $2 = "gnd" besitzen. Damit dieses nicht von Hand
-eingegeben werden muss, ergänzt die vorliegende Fix-Routine dieses Unterfeld
+Sacherschliessungsfelder in DSV01 und DSV05, die mit der GND verknüpft sind, müssen zwingend ein Unterfeld $2 = "gnd" besitzen. Damit dieses nicht von Hand eingegeben werden muss, ergänzt die vorliegende Fix-Routine dieses Unterfeld
 
 ### Beschreibung
 
