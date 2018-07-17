@@ -87,13 +87,17 @@ Gewisse Formschlagwörter in Feld 655 haben sich mit der Umstellung von RSWK zu 
 
 ### Beschreibung
 
-Die Routine wird aktiv, wenn ein Feld 655 mit Indikator 2=7 und mindestens ein Unterfeld $$2, das mit gnd* beginnt, vorhanden ist. Dann wird geprüft, ob in $$a ein altes RSWK-Formschlagwort vorhanden ist. Dieses wird durch den gültigen RDA-Begriff ersetzt (inkl. korrektes Unterfeld $$2). Die Zuordnung geschieht aufgrund folgender Konkordanz in https://github.com/basimar/ub_fix_doc/blob/master/rdacodes.pl:
+Die Routine wird aktiv, wenn ein Feld 655 mit Indikator 2=7 und mindestens ein Unterfeld $$2, das mit gnd* beginnt, vorhanden ist. Dann wird geprüft, ob in $$a ein altes RSWK-Formschlagwort vorhanden ist. Dieses wird durch den gültigen RDA-Begriff ersetzt (inkl. korrektes Unterfeld $$2). Die Zuordnung geschieht aufgrund folgender Konkordanz in https://github.com/basimar/ub_fix_doc/blob/master/rdacodes.pl.
+
+Bei anderem Inhalt von $$a kommt die Routine nicht zum Einsatz.
 
 ### Technische Implementation
 
 Die Fix-Routine muss in [http://aleph.unibas.ch/dirlist/u/dsv01/tab/tab_fix] eingetragen werden:
 
 * DSV01: INS   fix_doc_655.pl
+
+Wichtig: In tab_fix muss die Routine vor der Gonin-Routine ids_fixdoc_gnd eingetragen werden. Ids_fixdoc_gnd markiert die alten RSWK-Begriffe mit einem Unterfeld $7. Um dies zu verhindern, muss fix_doc_655.pl vor der Gonin-Routine zum Einsatz kommen.
 
 Zusätzlich müssen auf dem Aleph Server folgendes Perl-Skript nach /exlibris/aleph/a22_1/aleph/exe kopiert werden:
 
