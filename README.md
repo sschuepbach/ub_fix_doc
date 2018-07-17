@@ -79,4 +79,23 @@ Zusätzlich müssen auf dem Aleph Server folgendes Perl-Skript nach /exlibris/al
 * fix_doc_2gnd.pl
 * fix_doc_2gnd_han.pl
 
+## fix_doc_655.pl
+
+### Anwendungszweck
+
+Gewisse Formschlagwörter in Feld 655 haben sich mit der Umstellung von RSWK zu RDA geändert. Da die alten Begriff nicht von der Gonin-Routine korrigiert werden, würde dafür eine extra Fix-Routine erstellt.
+
+### Beschreibung
+
+Die Routine wird aktiv, wenn ein Feld 655 mit Indikator 2=7 und mindestens ein Unterfeld $$2, das mit gnd* beginnt, vorhanden ist. Dann wird geprüft, ob in $$a ein altes RSWK-Formschlagwort vorhanden ist. Dieses wird durch den gültigen RDA-Begriff ersetzt (inkl. korrektes Unterfeld $$2). Die Zuordnung geschieht aufgrund folgender Konkordanz in https://github.com/basimar/ub_fix_doc/blob/master/rdacodes.pl:
+
+### Technische Implementation
+
+Die Fix-Routine muss in dsv01/tab in [http://aleph.unibas.ch/dirlist/u/dsv51/tab/tab_fix] eingetragen werden:
+
+* DSV01: INS   fix_doc_655.pl
+
+Zusätzlich müssen auf dem Aleph Server folgendes Perl-Skript nach /exlibris/aleph/a22_1/aleph/exe kopiert werden:
+
+* fix_doc_655.pl
 
