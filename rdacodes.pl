@@ -774,7 +774,7 @@ our %code655 = (
 "Kongress" => "Konferenzschrift",
 "Lernprogramm" => "Lernsofware",
 "Programm" => "Sofware",
-"Photographie" => "Fotografie"
+"Photographie" => "Fotografie",
 "Schriftenreihe" => "Monografische Reihe",
 "Wörterbuch <mehrsprachig>" => "Mehrsprachiges Wörterbuch",
 );
