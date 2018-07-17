@@ -2,7 +2,7 @@
 
 Dieses Repository enthält verschiedene Fix-Routinen, die im IDS Basel Bern (DSV01) und HAN (DSV05) zum Einsatz kommen.
 
-## ub_fix_doc_rdasave.pl
+## fix_doc_rdasave.pl
 
 ### Anwendungszweck
 
@@ -34,7 +34,7 @@ Zusätzlich müssen auf dem Aleph Server folgende Perl-Skripte nach /exlibris/al
 * fix_doc_rdasave.pl (Fix-Routine)
 * rdacodes.pl (Konkordanz)
 
-## ub_fix_doc_rdaimport.pl
+## fix_doc_rdaimport.pl
 
 ### Anwendungszweck
 
@@ -53,7 +53,7 @@ Zusätzlich müssen auf dem Aleph Server folgendes Perl-Skript nach /exlibris/al
 * fix_doc_rdaimport.pl
 * rdacodes.pl (Konkordanz)
 
-## ub_fix_doc_2gnd.pl / ub_fix_doc_2gnd_han.pl
+## fix_doc_2gnd.pl / fix_doc_2gnd_han.pl
 
 ### Anwendungszweck
 
