@@ -1,6 +1,6 @@
 #!/exlibris/product/bin/perl -w
 ##########################################################################
-# fix_doc_655.pl Korrigiert alte RSWK-Formschlagw√rter in Feld 655, die in 
+# fix_doc_655.pl Korrigiert alte RSWK-Formschlagw√Érter in Feld 655, die in 
 # RDA anders lauten 
 ##########################################################################
 # speichern in $aleph_dev/aleph/exe
@@ -41,7 +41,7 @@ while ( my $line = <STDIN>) {
             my @subfields = split(/\$\$/, $line);
             shift @subfields;
 
-            # Pruefen, ob in einem $2 ein Code, der mit gnd beginnt, vorkommt
+            # Pruefen, ob in einem $$2 ein Code, der mit gnd beginnt, vorkommt
             if ( grep /^2gnd/, @subfields ) {
 
                 foreach (@subfields) {
