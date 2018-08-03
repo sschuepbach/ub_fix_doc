@@ -56,7 +56,7 @@ sub move_numeric_values {
 }
 
 # Remove first line as it doesn't contain categories
-# my $line1 = <STDIN>;
+my $line1 = <STDIN>;
 while (my $line = <STDIN>) {
     if ($line) {
         chomp $line;
