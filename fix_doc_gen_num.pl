@@ -21,7 +21,7 @@ sub move_numeric_values {
     my $targetsubfieldvalue = "";
 
     # Modify line if beginning with $field and not containing $targetsubfield
-    if (substr($line, 0, 3) =~ /\Q$field/ && index($line, "\$\$$targetsubfield") == -1) {
+    if (substr($line, 10, 3) =~ /\Q$field/ && index($line, "\$\$$targetsubfield") == -1) {
         # Get subfields as array and skip first element
         my @subfields = split(/\$\$/, $line);
         shift @subfields;
