@@ -21,7 +21,7 @@ sub move_numeric_values {
     my $targetsubfieldvalue = "";
 
     # Modify line if beginning with $field and not containing $targetsubfield
-    if (substr($line, 10, 3) =~ /\Q$field/ && index($line, "\$\$$targetsubfield") == -1) {
+    if (substr($line, 0, 3) =~ /\Q$field/ && index($line, "\$\$$targetsubfield") == -1) {
         # Get subfields as array and skip first element
         my @subfields = split(/\$\$/, $line);
         shift @subfields;
@@ -29,15 +29,24 @@ sub move_numeric_values {
         # Keep only subfields beginning with $origsubfield and concatenate them
         my $fields = join(" ", grep (/^\Q$origsubfield/, @subfields));
         my $after_number = 0;
+        my $after_dash = 0;
 
-        # Remove all non-numeric characters and separate resulting number blocks with slashes
+        # Remove all non-numeric characters (except different flavors of dashes / hyphens / minus signs)
+        # and separate resulting number blocks / ranges with slashes
         for (my $key = 0; $key < length($fields); $key++) {
             if (substr($fields, $key, 1) =~ /[0-9]/) {
                 $after_number = 1;
                 if (length $targetsubfieldvalue == 0) {
                     $targetsubfieldvalue = "\$\$$targetsubfield";
                 }
+                if ($after_dash == 1) {
+                    $targetsubfieldvalue = $targetsubfieldvalue . "-";
+                    $after_dash = 0;
+                }
                 $targetsubfieldvalue = $targetsubfieldvalue . substr($fields, $key, 1);
+            }
+            elsif ($after_number == 1 && substr($fields, $key, 1) =~ /[\x{002D}\x{2010}\x{2012}\x{2013}\x{2014}\x{2015}\x{2212}]/) {
+                $after_dash = 1;
             }
             elsif ($after_number == 1) {
                 $targetsubfieldvalue = $targetsubfieldvalue . "/";
